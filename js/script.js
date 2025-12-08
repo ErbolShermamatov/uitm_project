@@ -1,7 +1,7 @@
-const track = document.querySelector('.slider-track');
-const btnPrev = document.getElementById('btn-prev');
-const btnNext = document.getElementById('btn-next');
-const items = document.querySelectorAll('.slider-item');
+const track = document.querySelector('.header__main-track');
+const btnPrev = document.getElementById('.header__main-slider-prev');
+const btnNext = document.getElementById('.header__main-slider-next');
+const items = document.querySelectorAll('.header__main-slide');
 
 let position = 0;
 const itemsCount = items.length;

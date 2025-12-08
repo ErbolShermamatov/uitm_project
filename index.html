@@ -4,101 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UITM-Project</title>
     <meta name="description"
-        content="Our group project is simple website that allows you to watch anime and have a great time">
+        content="Our website is a reference guide that helps users learn more about their favorite anime and discover new ones.">
+    <title>UITM project</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
                 <div class="header__top-inner">
                     <div class="header__top-img-box">
-                        <a href="/" class="header__top-img-link"><img src="img/header/logo.png" alt="logo"
+                        <a href="/" class="header__top-img-link"><img src="img/header/logo_svg.svg" alt="Main Logo"
                                 class="header__top-img"></a>
                     </div>
                     <nav class="header__top-nav">
                         <ul class="header__top-nav-list">
-                            <li class="header__top-nav-list-item">GENRES</li>
-                            <li class="header__top-nav-list-item">TYPES</li>
-                            <li class="header__top-nav-list-item">NEW RELEASES</li>
-                            <li class="header__top-nav-list-item">ONGOING</li>
+                            <li class="header__top-nav-item"><a href="#" class="header__top-nav-item-link">ONGOING</a>
+                            </li>
+                            <li class="header__top-nav-item"><a href="#" class="header__top-nav-item-link">POPULAR</a>
+                            </li>
+                            <li class="header__top-nav-item"><a href="#"
+                                    class="header__top-nav-item-link">RECOMMENDATIONS</a></li>
+                            <li class="header__top-nav-item"><a href="#" class="header__top-nav-item-link">SOON</a></li>
                         </ul>
                     </nav>
-                    <ul class="header__top-socials">
-                        <li class="header__top-socials-item"><a href="#" class="header__top-socials-link"><img
-                                    src="img/header/icons/facebook-icon.svg" alt="Facebook link"
-                                    class="header__top-socials-img"></a></li>
-                        <li class="header__top-socials-item"><a href="#" class="header__top-socials-link"><img
-                                    src="img/header/icons/inst-icon.svg" alt="Instagram link"
-                                    class="header__top-socials-img"></a></li>
-                        <li class="header__top-socials-item"><a href="#" class="header__top-socials-link"><img
-                                    src="img/header/icons/x-icon.svg" alt="Twitter(X) link"
-                                    class="header__top-socials-img"></a></li>
-                        <li class="header__top-socials-item"><a href="#" class="header__top-socials-link"><img
-                                    src="img/header/icons/yt-icon.svg" alt="Youtube link"
-                                    class="header__top-socials-img"></a></li>
-                        <li class="header__top-socials-item"><a href="#" class="header__top-socials-link"><img
-                                    src="img/header/icons/spotify-icon.svg" alt="Spotify link"
-                                    class="header__top-socials-img"></a></li>
-                    </ul>
+                    <div class="header__top-btn-box">
+                        <button type="button" class="header__top-dark-mode-btn"></button>
+                        <button type="button" class="header__top-enter-btn">REGISTER</button>
+                        <button type="button" class="header__top-enter-btn">LOG IN</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="header__main">
-            <div class="container">
+            <div class="header__main">
                 <div class="header__main-inner">
-                    <div class="slider-container">
-                        <div class="slider-track">
-                            <div class="slider-item">
-                                <div class="slider-item__content">
-                                    <h2 class="slider-item__title">Naruto</h2>
-                                    <p class="slider-item__desc">Twelve years ago, the Hidden Leaf Village was attacked by a fearsome Nine-Tailed Fox. To save the village, the leader sealed the beast inside a newborn orphan named Naruto Uzumaki. Ostracized by the villagers and growing up in loneliness, Naruto vows to become the Hokage, the strongest ninja and leader of his village, so everyone will finally acknowledge him.</p>
-                                    <a href="#" class="slider-item__btn">Watch</a>
-                                </div>
-                                <div class="slider-item__img-box">
-                                    <img src="img/header/bg/naruto-logo.svg" class="slider-item__img">
-                                </div>
+                    <form class="header__main-form">
+                        <input type="search" class="header__main-form-input" placeholder="ENTER...">
+                        <button type="submit" class="header__main-form-btn">SEARCH</button>
+                    </form>
+                    <div class="header__main-slider">
+                        <div class="header__main-track">
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
                             </div>
-                            <div class="slider-item">
-                                <div class="slider-item__content">
-                                    <h2 class="slider-item__title">One Piece</h2>
-                                    <p class="slider-item__desc">One Piece is an epic fantasy adventure that follows Monkey D. Luffy, a young man whose body gained rubber properties after eating a mystical Devil Fruit. His dream is to find the legendary treasure known as the "One Piece" and become the King of the Pirates</p>
-                                    <a href="#" class="slider-item__btn">Watch</a>
-                                </div>
-                                <div class="slider-item__img-box">
-                                    <img src="img/header/bg/one-piece-bg.png" class="slider-item__img">
-                                </div>
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
                             </div>
-                            <div class="slider-item">
-                                <div class="slider-item__content">
-                                    <h2 class="slider-item__title">Bleach</h2>
-                                    <p class="slider-item__desc">Bleach is a supernatural action-adventure series centered on Ichigo Kurosaki, a teenager who can see ghosts. His life changes dramatically when he encounters Rukia Kuchiki, a Soul Reaper (Shinigami)—a spiritual entity responsible for guiding souls to the afterlife (Soul Society) and purifying evil spirits known as Hollows</p>
-                                    <a href="#" class="slider-item__btn">Watch</a>
-                                </div>
-                                <div class="slider-item__img-box">
-                                    <img src="img/header/bg/bleach-bg.png" class="slider-item__img">
-                                </div>
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
                             </div>
-                            
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
+                            </div>
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
+                            </div>
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
+                            </div>
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
+                            </div>
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
+                            </div>
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
+                            </div>
+                            <div class="header__main-slide">
+                                <a href="#" class="header__main-slide-link">
+                                    <img src="img/header/bg/demon_slayer-img.jpg" alt="Demon Slayer" class="header__main-slide-img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__main-slider-controls">
+                            <button class="header__main-slider-prev">BACK</button>
+                            <button class="header__main-slider-next">NEXT</button>
                         </div>
                     </div>
-                    <div class="slider-buttons">
-                        <button id="btn-prev"></button>
-                        <button id="btn-next"></button>
-                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        </header>
+        <main class="main"></main>
+        <footer class="footer"></footer>
+    </div>
     <script src="js/script.js"></script>
 </body>
 

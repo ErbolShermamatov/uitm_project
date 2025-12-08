@@ -1,24 +1,24 @@
 @font-face {
-    font-family: 'Lato';
-    src: local('Lato-Regular'),
-        url('../fonts/Lato-Regular.woff2') format('woff2'),
-        url('../fonts/Lato-Regular.woff') format('woff'),
-        url('../fonts/Lato-Regular.eot') format('embedded-opentype');
+    font-family: 'Helvetica';
+    src: local('Helvetica-Light')
+        url('../fonts/helvetica_light.woff2') format('woff2'),
+        url('../fonts/helvetica_light.woff') format('woff'),
+        url('../fonts/helvetica_light.eot') format('embedded-opentype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica-Regular')
+        url('../fonts/helvetica_regular.woff2') format('woff2'),
+        url('../fonts/helvetica_regular.woff') format('woff'),
+        url('../fonts/helvetica_regular.eot') format('embedded-opentype');
     font-weight: 400;
 }
 @font-face {
-    font-family: 'Lato';
-    src: local('Lato-Bold'),
-        url('../fonts/Lato-Bold.woff2') format('woff2'),
-        url('../fonts/Lato-Bold.woff') format('woff'),
-        url('../fonts/Lato-Bold.eot') format('embedded-opentype');
+    font-family: 'Helvetica';
+    src: local('Helvetica-Bold')
+        url('../fonts/helvetica_bold.woff2') format('woff2'),
+        url('../fonts/helvetica_bold.woff') format('woff'),
+        url('../fonts/helvetica_bold.eot') format('embedded-opentype');
     font-weight: 700;
-}
-@font-face {
-    font-family: 'Lato';
-    src: local('Lato-Regular'),
-        url('../fonts/Lato-Black.woff2') format('woff2'),
-        url('../fonts/Lato-Black.woff') format('woff'),
-        url('../fonts/Lato-Black.eot') format('embedded-opentype');
-    font-weight: 900;
 }
