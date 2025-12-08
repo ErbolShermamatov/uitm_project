@@ -14,7 +14,7 @@ body {
 
 .header__top {
     padding: 15px 30px;
-    box-shadow: 0px 5px 5px #c4c4c4;
+    box-shadow: 0px 5px 5px #e1e1e1;
     border-radius: 5px;
 }
 
@@ -69,6 +69,7 @@ body {
     height: 40px;
     font-weight: 700;
     background-color: rgb(48, 48, 48);
+    box-shadow: 0px 5px 5px #e6e6e6;
 }
 
 .header__main {
@@ -96,6 +97,7 @@ body {
     line-height: 1.5;
     position: relative;
     padding: 0 20px;
+    box-shadow: 0px 2px 5px #e6e6e6;
 }
 
 .header__main-form-btn {
@@ -106,6 +108,7 @@ body {
     color: #fff;
     background-color: rgb(48, 48, 48);
     border-radius: 5px;
+    box-shadow: 0px 5px 5px #e6e6e6;
 }
 
 .header__main-slider {
