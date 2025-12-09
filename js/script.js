@@ -1,30 +1,26 @@
-const track = document.querySelector('.header__main-track');
-const btnPrev = document.getElementById('.header__main-slider-prev');
-const btnNext = document.getElementById('.header__main-slider-next');
-const items = document.querySelectorAll('.header__main-slide');
+// Инициализация Swiper
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 15,
+    loop: true, 
 
-let position = 0;
-const itemsCount = items.length;
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 
-const moveSlider = () => {
-    const translateValue = -(position * 100); 
-    track.style.transform = `translateX(${translateValue}%)`;
-};
-
-btnNext.addEventListener('click', () => {
-    if (position < itemsCount - 1) {
-        position++;
-    } else {
-        position = 0;
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 10
+        },
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 15
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 15
+        }
     }
-    moveSlider();
-});
-
-btnPrev.addEventListener('click', () => {
-    if (position > 0) {
-        position--;
-    } else {
-        position = itemsCount - 1;
-    }
-    moveSlider();
 });
