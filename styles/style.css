@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica';
+    font-family: 'Helvetica', 'Arial', sans-serif;
     background-color: rgb(27, 27, 27);
 }
 
@@ -82,7 +82,7 @@ body {
 .header__top-enter-btn:hover {
     background-color: #fff;
     transform: scale(1.05);
-    color:rgb(27, 27, 27);
+    color: rgb(27, 27, 27);
 }
 
 .header__main {
@@ -124,10 +124,11 @@ body {
     box-shadow: 0px 5px 5px #e6e6e6;
     transition: all .3s;
 }
+
 .header__main-form-btn:hover {
     transform: scale(1.05);
     background-color: #fff;
-    color:rgb(27, 27, 27)
+    color: rgb(27, 27, 27)
 }
 
 .swiper {
@@ -149,12 +150,14 @@ body {
     overflow: hidden;
     border-radius: 5px;
 }
+
 .swiper-slide img {
     display: block;
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
+
 .swiper-preview {
     visibility: hidden;
     position: absolute;
@@ -174,10 +177,12 @@ body {
     border-radius: 50%;
     z-index: 20;
 }
+
 .swiper-button-next:hover, .swiper-button-prev:hover {
     background: rgb(0, 0, 0);
     color: #fff;
 }
+
 .swiper-button-next:after, .swiper-button-prev:after {
     font-size: 20px;
     font-weight: bold;
@@ -189,35 +194,45 @@ body {
 .popular {
     padding: 60px 30px;
 }
-.popular__inner {
-}
+
+.popular__inner {}
+
 .popular__title {
     font-size: 2rem;
     font-weight: 400;
     text-align: center;
-    margin: 40px;
+    margin-bottom: 40px;
 }
+
 .popular__anime-list {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     row-gap: 40px;
+    column-gap: 5px;
 }
+
 .popular__anime-item {
+    margin: 0 auto;
     width: 90%;
-    height: 320px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
+
 .popular__anime-img-box {
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+    background-color: #333;
     margin-bottom: 10px;
 }
-.popular__anime-img-box:hover .popular__anime-link{
+
+.popular__anime-img-box:hover .popular__anime-link {
     visibility: visible;
 }
+
 .popular__anime-link {
     visibility: hidden;
     position: absolute;
@@ -227,12 +242,12 @@ body {
     bottom: 0;
     background: #e1e1e193;
 }
+
 .popular__anime-img {
     width: 100%;
     object-fit: cover;
 }
-.popular__anime-title {
 
-}
-.popular__anime-year {
-}
+.popular__anime-title {}
+
+.popular__anime-year {}
