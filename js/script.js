@@ -1,4 +1,3 @@
-// Инициализация Swiper
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     spaceBetween: 15,

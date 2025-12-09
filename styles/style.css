@@ -4,8 +4,8 @@ body {
 }
 
 .wrapper {
-    max-width: 1200px;
-    margin: 200px auto;
+    max-width: 79%;
+    margin: 90px auto;
     background-color: #fff;
     border-radius: 5px;
     position: relative;
@@ -16,6 +16,12 @@ body {
     padding: 15px 30px;
     box-shadow: 0px 5px 5px #e1e1e1;
     border-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 10.5%;
+    right: 10.5%;
+    z-index: 15;
+    background: #fff;
 }
 
 .header__top-inner {
@@ -35,7 +41,7 @@ body {
 }
 
 .header__top-nav {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.2rem;
 }
 
@@ -45,7 +51,6 @@ body {
 }
 
 .header__top-nav-item:hover {
-    transform: scale(1.05);
     text-decoration: underline;
 }
 
@@ -68,7 +73,7 @@ body {
     font-size: 1rem;
     width: 110px;
     height: 40px;
-    font-weight: 700;
+    font-weight: 400;
     background-color: rgb(48, 48, 48);
     box-shadow: 0px 5px 5px #e6e6e6;
     transition: all .2s;
@@ -111,7 +116,7 @@ body {
 .header__main-form-btn {
     width: 90px;
     height: 40px;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1rem;
     color: #fff;
     background-color: rgb(48, 48, 48);
@@ -127,32 +132,107 @@ body {
 
 .swiper {
     width: 100%;
-    height: 280px;
+    height: 300px;
 }
 
 .swiper-slide {
-    width: 175px;
+    width: 170px;
     height: 100%;
+    position: relative;
 }
 
+.swiper-slide:hover .swiper-preview {
+    visibility: visible;
+}
+
+.header__main-slide-img-box {
+    overflow: hidden;
+    border-radius: 5px;
+}
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
-    border-radius: 5px;
+}
+.swiper-preview {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e1e1e193;
 }
 
 .swiper-button-next, .swiper-button-prev {
     color: rgb(0, 0, 0);
     background: #fff;
+    transition: all .3s;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     z-index: 20;
 }
-
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
 .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
+}
+
+
+/*---Section: popular*/
+
+.popular {
+    padding: 60px 30px;
+}
+.popular__inner {
+}
+.popular__title {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 40px;
+}
+.popular__anime-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 40px;
+}
+.popular__anime-item {
+    width: 90%;
+    height: 320px;
+    text-align: center;
+}
+.popular__anime-img-box {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+.popular__anime-img-box:hover .popular__anime-link{
+    visibility: visible;
+}
+.popular__anime-link {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e1e1e193;
+}
+.popular__anime-img {
+    width: 100%;
+    object-fit: cover;
+}
+.popular__anime-title {
+
+}
+.popular__anime-year {
 }
