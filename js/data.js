@@ -1,19 +1,19 @@
 const animeData = [
     {
         title: 'Demon Slayer',
-        img: 'img/main/bg/demon_slayer-bg.jpg',
+        img: 'img/main/bg/demon_slayer-bg.webp',
         year: 2020,
         category: 'popular' //sign for filter
     },
     {
         title: 'Chainsaw Man',
-        img: 'img/main/bg/chaisawman-bg.jpg',
+        img: 'img/main/bg/chaisawman-bg.webp',
         year: 2022,
         category: 'popular' //sign for filter
     },
     {
         title: 'One Piece',
-        img: 'img/main/bg/one-piece-bg.jpg',
+        img: 'img/main/bg/one-piece-bg.webp',
         year: 1999,
         category: 'ongoing' //sign for filter
     },
@@ -23,20 +23,21 @@ const renderAnime = (list) => {
     const container = document.querySelector('.popular__anime-list');
     container.innerHTML = ''; //Очищаем текущие карточки
     
-    //Генерируем новый HTML
-    list.forEach(item => {
-        const animeHtml = `
-        <li class="popular__anime-item">
-                <div class="popular__anime-img-box">
-                    <a href="#" class="popular__anime-link"></a>
-                    <img src="${item.img}" alt="${item.title}" class="popular__anime-img">
-                </div>
-                <h3 class="popular__anime-title">${item.title}</h3>
-                <span class="popular__anime-year">(${item.year})</span>
+    const animeHtml = list.map((item, index) => {
+        const delay = index * 0.1;    
+        
+        return `
+        <li class="popular__anime-item" style="animation-delay: ${delay}s"> <div class="popular__anime-img-box">
+                <a href="details.html?id=${item.id}" class="popular__anime-link"></a>
+                <img src="${item.img}" alt="${item.title}" class="popular__anime-img" loading="lazy">
+            </div>
+            <h3 class="popular__anime-title">${item.title}</h3>
+            <span class="popular__anime-year">(${item.year})</span>
         </li>
-        `;
-        container.insertAdjacentHTML('beforeend', animeHtml);
-    });
+    `;
+    }).join('');
+
+    container.innerHTML = animeHtml;
 
     const navLinks = document.querySelectorAll('.header__top-nav-item-link');
     navLinks.forEach(link => {
