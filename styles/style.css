@@ -149,9 +149,6 @@ body {
     position: relative;
 }
 
-.swiper-slide:hover .swiper-preview {
-    visibility: visible;
-}
 
 .header__main-slide-img-box {
     overflow: hidden;
@@ -166,7 +163,6 @@ body {
 }
 
 .swiper-preview {
-    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -241,7 +237,6 @@ body {
 }
 
 .popular__anime-link {
-    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -269,6 +264,27 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes animeHover {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.swiper-preview {
+    opacity: 0;
+}
+.swiper-slide:hover .swiper-preview {
+    animation: animeHover 0.3s ease-out forwards;
+}
+.popular__anime-link {
+    opacity: 0;
+}
+.popular__anime-img-box:hover .popular__anime-link {
+    animation: animeHover 0.3s ease-out forwards;
 }
 
 .popular__anime-item {
