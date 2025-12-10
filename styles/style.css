@@ -50,6 +50,10 @@ body {
     gap: 15px;
 }
 
+.header__top-nav-item {
+    transition: all .3s;
+}
+
 .header__top-nav-item:hover {
     text-decoration: underline;
 }
