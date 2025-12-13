@@ -107,16 +107,17 @@ document.addEventListener('DOMContentLoaded', () => {
             renderAnime(filtered);
         });
     }
-    
     const darkModeBtn = document.querySelector('.header__top-dark-mode-btn');
     const logo = document.querySelector('.header__top-img');
     darkModeBtn.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         if (document.body.classList.contains('dark-mode')) {
+            saveTheme('dark');
             logo.setAttribute('src', "img/header/icons/dark-mode-logo.png");
             localStorage.setItem('theme', 'dark')
         } else if (!document.body.classList.contains('dark-mode')) {
             logo.setAttribute('src', "img/header/icons/logo.png");
+            localStorage.setItem('theme', 'light');
         }
     })
 });

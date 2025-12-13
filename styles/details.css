@@ -1,0 +1,130 @@
+body {
+    height: auto;
+}
+.details-wrapper {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.details-img-box {
+    width: 300px;
+}
+.details-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.details-info {
+    flex: 1;
+    overflow: scroll;
+    height: 450px;
+}
+
+.details-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.details-meta {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.details-desc {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    font-weight: bold;
+}
+
+.main {
+    margin-top: 100px;
+}
+.details-desc {
+    margin-bottom: 30px;
+}
+.details-characters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+}
+.details-characters-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.character {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    box-shadow: 0px 0px 10px #bcbcbc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fcfcfc;
+}
+.details-trailer__video {
+    height: 400px;
+}
+.character__img-box {
+    width: 100%;
+    aspect-ratio: 3 / 4; 
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 10px #e5e5e5;
+}
+.character__title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+}
+.character__img {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover; 
+    object-position: center center; 
+    transition: transform 0.3s;
+}
+.character__name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color:rgb(48, 48, 48);
+}
+.details-trailer {
+    width: 100%;
+    padding: 50px 0 20px;
+}
+.details-trailer__video {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.details-trailer__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .details-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .details-characters-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -17,12 +17,12 @@ body {
 .dark-mode .header__top {
     background-color: #313131;
 }
-.dark-mode .header__top-enter-btn, .dark-mode .header__main-form-btn {
+.dark-mode .header__main-form-btn {
     background-color: #535353;
     color: #c1c0c0;
     box-shadow: 0px 5px 10px #898989;
 }
-.dark-mode .header__top-enter-btn:hover, .dark-mode .header__main-form-btn:hover {
+.dark-mode .header__main-form-btn:hover {
     background: #8c8b8b;
 }
 .dark-mode .swiper-button-next, .dark-mode .swiper-button-prev {
@@ -108,24 +108,6 @@ body {
     height: 40px;
     margin-right: 10px;
     background: url('../img/header/icons/dark-mode-btn-icon.svg') 100% / cover no-repeat;
-}
-
-.header__top-enter-btn {
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1rem;
-    width: 110px;
-    height: 40px;
-    font-weight: 700;
-    background-color: rgb(48, 48, 48);
-    box-shadow: 0px 3px 5px #e6e6e6;
-    transition: all .2s;
-}
-
-.header__top-enter-btn:hover {
-    background-color: #fff;
-    transform: scale(1.05);
-    color: rgb(27, 27, 27);
 }
 
 .header__main {
