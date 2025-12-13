@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Details</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <style>
+        .details-wrapper {
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .details-img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .details-info {
+            flex: 1;
+            overflow: scroll;
+            height: 450px;
+        }
+
+        .details-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .details-meta {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .details-desc {
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: rgb(48, 48, 48);
+            font-weight: bold;
+        }
+        .main {
+            margin-top: 100px;
+        }
+        @media (max-width: 768px) {
+            .details-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="header__top-inner">
+                    <div class="header__top-img-box">
+                        <a href="index.html" class="header__top-img-link">
+                            <img src="img/header/logo_svg.svg" alt="Main Logo" class="header__top-img">
+                        </a>
+                    </div>
+                    <nav class="header__top-nav">
+                        <ul class="header__top-nav-list">
+                            <li class="header__top-nav-item"><a href="index.html"
+                                    class="header__top-nav-item-link">HOME</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="details-wrapper" id="detailsContainer">
+                <p>Loading...</p>
+            </div>
+        </main>
+
+        <footer class="footer"></footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/details.js"></script>
+</body>
+
+</html>

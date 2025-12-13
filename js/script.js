@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return `
             <li class="popular__anime-item" style="animation-delay: ${delay}s">
                 <div class="popular__anime-img-box">
-                    <!-- Ссылка теперь ведет на details.html с ID аниме -->
                     <a href="details.html?id=${item.id}" class="popular__anime-link"></a>
                     <img src="${item.img}" alt="${item.title}" class="popular__anime-img" loading="lazy">
                 </div>
