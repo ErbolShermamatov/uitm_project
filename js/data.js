@@ -127,4 +127,37 @@ const animeData = [
         category: 'ongoing',
         description: 'A shy guitarist dreams of being in a rock band but is too afraid to talk to people.'
     },
+    {
+        title: 'Vinland Saga',
+        img: 'img/main/bg/vinland-bg.webp',
+        year: 2020,
+        id: 'vinland-saga',
+        category: 'ongoing',
+        description: ''
+    },
+    {
+        title: 'Mob Psycho 100',
+        img: 'img/main/bg/mob-psycho-bg.webp',
+        year: 2016,
+        id: 'mob-psycho',
+        category: 'ongoing',
+        description: ''
+    },
+    {
+        title: 'Jojo Bizarre Adventure',
+        img: 'img/main/bg/jojo-bg.webp',
+        year: 2012,
+        id: 'jojo',
+        category: 'ongoing',
+        description: ''
+    },
+    {
+        title: 'Code Geass',
+        img: 'img/main/bg/code-geass.webp',
+        year: 2008,
+        id: 'code-geass',
+        category: 'completed',
+        description: ''
+    },
+    
 ];
