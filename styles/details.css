@@ -19,8 +19,6 @@ body {
 
 .details-info {
     flex: 1;
-    overflow: scroll;
-    height: 450px;
 }
 
 .details-title {

@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="details-trailer">
                     <h2 class="details-trailer__title">Watch Trailer</h2>
-                    <div class="details-trailer__video">${anime.watch}</div>
+                    <div class="details-trailer__video">
+                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/${anime.watch}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         `;

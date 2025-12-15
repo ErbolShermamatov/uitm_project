@@ -27,11 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     slidesPerView: 2,
                     spaceBetween: 10
                 },
-                640: {
+                700: {
                     slidesPerView: 3,
-                    spaceBetween: 15
+                    spaceBetween: 10
                 },
                 1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                },
+                1100: {
                     slidesPerView: 5,
                     spaceBetween: 15
                 }
@@ -91,6 +95,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+    const menu = document.querySelector('.header__top-menu');
+    const menuBtn = document.querySelector('.header__top-menu-btn');
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('visible')
+        const menuLinks = document.querySelectorAll('.header__top-menu-item-link');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                menuLinks.forEach(btn => btn.classList.remove('active'));
+                link.classList.add('active');
+                sectionTitle.textContent = link.textContent;
+                const categoryBtn = link.textContent.trim().toLowerCase();
+
+                if (categoryBtn === 'popular' || categoryBtn === 'ongoing') {
+                    const filtered = animeData.filter(item => item.category === categoryBtn);
+                    renderAnime(filtered);
+                } else {
+                    renderAnime(animeData);
+                }
+            })
+        })
+
+    })
+
+
     const searchForm = document.querySelector('.header__main-form');
     const searchInput = document.querySelector('.header__main-form-input');
 
@@ -112,12 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
     darkModeBtn.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         if (document.body.classList.contains('dark-mode')) {
-            saveTheme('dark');
             logo.setAttribute('src', "img/header/icons/dark-mode-logo.png");
-            localStorage.setItem('theme', 'dark')
         } else if (!document.body.classList.contains('dark-mode')) {
             logo.setAttribute('src', "img/header/icons/logo.png");
-            localStorage.setItem('theme', 'light');
         }
     })
 });
