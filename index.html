@@ -4,86 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Our website is a reference guide that helps users learn more about their favorite anime and discover new ones.">
-    <title>UITM project</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>To-do task manager</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="header__top">
-                <div class="header__top-inner">
-                    <button class="header__top-menu-btn">Menu</button>
-                    <div class="header__top-img-box">
-                        <a href="/" class="header__top-img-link"><img src="img/header/icons/logo.png" alt="Main Logo"
-                                class="header__top-img"></a>
-                    </div>
-                    <nav class="header__top-nav">
-                        <ul class="header__top-nav-list">
-                            <li class="header__top-nav-item"><a href="#" class="header__top-nav-item-link">ONGOING</a>
-                            </li>
-                            <li class="header__top-nav-item"><a href="#" class="header__top-nav-item-link">POPULAR</a>
-                            </li>
-                            <li class="header__top-nav-item"><a href="#"
-                                    class="header__top-nav-item-link">RECOMMENDATIONS</a></li>
-                            <li class="header__top-nav-item"><a href="#" class="header__top-nav-item-link">SOON</a></li>
-                        </ul>
-                    </nav>
-                    <div class="header__top-btn-box">
-                        <button type="button" class="header__top-dark-mode-btn"></button>
-                    </div>
-                    <div class="header__top-menu">
-                        <ul class="header__top-menu-list">
-                            <li class="header__top-menu-item">
-                                <a href="#" class="header__top-menu-item-link">ONGOING</a>
-                            </li>
-                            <li class="header__top-menu-item">
-                                <a href="#" class="header__top-menu-item-link">POPULAR</a>
-                            </li>
-                            <li class="header__top-menu-item">
-                                <a href="#" class="header__top-menu-item-link">RECOMMENDATIONS</a>
-                            </li>
-                            <li class="header__top-menu-item">
-                                <a href="#" class="header__top-menu-item-link">SOON</a>
-                            </li>
-                        </ul>
-                    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__img-box">
+                    <a href="#" class="header__link">
+                        <img src="./images/logo.svg" alt="TaskMaster Logo" class="header__img" width="200" height="auto">
+                    </a>
+                </div>
+                <div class="header__btn-box">
+                    <a href="/" class="header__sign-in-btn btn">Sign In</a>
+                    <a href="/" class="header__start-btn btn">Get Started</a>
                 </div>
             </div>
-            <div class="header__main">
-                <div class="header__main-inner">
-                    <form class="header__main-form">
-                        <input type="search" class="header__main-form-input" placeholder="ENTER...">
-                        <button type="submit" class="header__main-form-btn">SEARCH</button>
-                    </form>
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__inner">
+                    <div class="hero-wrapper">
+                        <h1 class="hero__main-title">Organize your <span>work and life</span></h1>
+                        <p class="hero__description desc">Become focused, organized, and calm with TaskManager. The
+                            simple task manager that helps you get things done.</p>
+                        <div class="hero__btn-box">
+                            <a href="/" class="hero__start-btn btn">Start</a>
+                            <a href="/" class="hero__sign-in-btn btn">Sign in</a>
                         </div>
-
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>
-        </header>
-        <main class="main">
-            <section class="popular">
-                <div class="popular__inner">
-                    <h2 class="popular__title">POPULAR</h2>
-                    <ul class="popular__anime-list"></ul>
+        </section>
+        <section class="features">
+            <div class="container">
+                <div class="features__inner">
+                    <header class="features__header">
+                        <h2 class="features__title">Everything you need to stay productive</h2>
+                        <p class="features__desc desc">Powerful features to help you manage your tasks effectively</p>
+                    </header>
+                    <div class="features__content">
+                        <ul class="features__content-list">
+                            <li class="features__content-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-blue-600"
+                                    aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                                <h3 class="features__content-title">Task Management</h3>
+                                <p class="features__content-desc desc">Create, organize, and track your tasks with ease
+                                </p>
+                            </li>
+                            <li class="features__content-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-calendar w-6 h-6 text-blue-600"
+                                    aria-hidden="true">
+                                    <path d="M8 2v4"></path>
+                                    <path d="M16 2v4"></path>
+                                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                    <path d="M3 10h18"></path>
+                                </svg>
+                                <h3 class="features__content-title">Due Dates</h3>
+                                <p class="features__content-desc desc">Never miss a deadline with smart date tracking
+                                </p>
+                            </li>
+                            <li class="features__content-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-target w-6 h-6 text-blue-600"
+                                    aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                                <h3 class="features__content-title">Projects</h3>
+                                <p class="features__content-desc desc">Organize tasks into projects for better focus</p>
+                            </li>
+                            <li class="features__content-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-chart-column w-6 h-6 text-blue-600"
+                                    aria-hidden="true">
+                                    <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                                    <path d="M18 17V9"></path>
+                                    <path d="M13 17V5"></path>
+                                    <path d="M8 17v-3"></path>
+                                </svg>
+                                <h3 class="features__content-title">Progress Tracking</h3>
+                                <p class="features__content-desc desc">Monitor your productivity with detailed stats</p>
+                            </li>
+                            <li class="features__content-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-zap w-6 h-6 text-blue-600"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
+                                    </path>
+                                </svg>
+                                <h3 class="features__content-title">Fast & Simple</h3>
+                                <p class="features__content-desc desc">Intuitive interface designed for productivity</p>
+                            </li>
+                            <li class="features__content-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-shield w-6 h-6 text-blue-600"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                    </path>
+                                </svg>
+                                <h3 class="features__content-title">Secure</h3>
+                                <p class="features__content-desc desc">Your data is safe and private</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
-        </main>
-        <footer class="footer"></footer>
-    </div>
-    <script src="js/data.js"></script>
-    <script src="js/script.js"></script>
+            </div>
+        </section>
+        <section class="join-us">
+            <div class="container">
+                <div class="join-us__inner">
+                    <h2 class="join-us__title">Ready to get organized?</h2>
+                    <p class="join-us__desc">Join us to upgrade your productivity with TaskMaster</p>
+                    <a href="/" class="join-us__btn btn">Create your account</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__img-box">
+                    <a href="#" class="footer__link">
+                        <img src="./images/logo.svg" alt="TaskMaster Logo" class="footer__img" width="160" height="auto">
+                    </a>
+                </div>
+                <p class="footer__desc desc">© 2026 TaskMaster.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
