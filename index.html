@@ -12,14 +12,33 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="header__top">
-                <div class="header__top-inner">
-                    <button class="header__top-menu-btn">Menu</button>
-                    <div class="header__top-img-box">
-                        <a href="/" class="header__top-img-link"><img src="img/header/icons/logo.png" alt="Main Logo"
-                                class="header__top-img"></a>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__img-box">
+                    <a href="#" class="header__link">
+                        <img src="./images/logo.svg" alt="TaskMaster Logo" class="header__img" width="200" height="45">
+                    </a>
+                </div>
+                <div class="header__btn-box">
+                    <a href="login-register.html?mode=signin" class="header__sign-in-btn btn sign-in">Sign In</a>
+                    <a href="login-register.html?mode=register" class="header__start-btn btn register">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__inner">
+                    <div class="hero-wrapper">
+                        <h1 class="hero__main-title">Organize your <span>work and life</span></h1>
+                        <p class="hero__description desc">Become focused, organized, and calm with TaskManager. The
+                            simple task manager that helps you get things done.</p>
+                        <div class="hero__btn-box">
+                            <a href="login-register.html?mode=register" class="hero__start-btn btn register">Start</a>
+                            <a href="login-register.html?mode=signin" class="hero__sign-in-btn btn sign-in">Sign in</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,34 +131,33 @@
                     </div>
                 </div>
             </div>
-            <div class="header__main">
-                <div class="header__main-inner">
-                    <form class="header__main-form">
-                        <input type="search" class="header__main-form-input" placeholder="ENTER...">
-                        <button type="submit" class="header__main-form-btn">SEARCH</button>
-                    </form>
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                        </div>
-
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
+        </section>
+        <section class="join-us">
+            <div class="container">
+                <div class="join-us__inner">
+                    <h2 class="join-us__title">Ready to get organized?</h2>
+                    <p class="join-us__desc">Join us to upgrade your productivity with TaskMaster</p>
+                    <a href="login-register.html?mode=register" class="join-us__btn btn register">Create your account</a>
                 </div>
             </div>
-        </header>
-        <main class="main">
-            <section class="popular">
-                <div class="popular__inner">
-                    <h2 class="popular__title">POPULAR</h2>
-                    <ul class="popular__anime-list"></ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__img-box">
+                    <a href="/" class="footer__link">
+                        <img src="./images/logo.svg" alt="TaskMaster Logo" class="footer__img" width="160" height="">
+                    </a>
                 </div>
-            </section>
-        </main>
-        <footer class="footer"></footer>
-    </div>
-    <script src="js/data.js"></script>
-    <script src="js/script.js"></script>
+                <p class="footer__desc desc">© 2026 TaskMaster.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/database.js" type="module"></script>
+    <script src="scripts/ui.js" type="module"></script>
+    <script src="scripts/index.js" type="module"></script>
+    <script src="scripts/script.js" type="module"></script>
 </body>
 
 </html>
