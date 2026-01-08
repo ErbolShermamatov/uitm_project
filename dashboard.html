@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TaskMaster</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__img-box">
+                    <a href="index.html" class="header__link">
+                        <img src="./images/logo.svg" alt="TaskMaster Logo" width="150">
+                    </a>
+                </div>
+                <div class="header__user-info">
+                    Hello, <span id="headerUsername" class="header__user-name">User</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main__inner">
+                <aside class="user__profile">
+                    <div class="user__profile-inner">
+                        <div class="user__profile-top">
+                            <div class="user__profile-img-box"></div>
+                            <div class="user__profile-info">
+                                <p class="user__profile-nick"></p>
+                                <p class="user__profile-email"></p>
+                            </div>
+                        </div>
+                        <ul class="user__profile-sections-list">
+                            <li class="user__profile-sections-item active">
+                                <a href="#" class="user__profile-sections-item-link">My Tasks</a>
+                            </li>
+                            <li class="user__profile-sections-item">
+                                <a href="#" class="user__profile-sections-item-link">Settings</a>
+                            </li>
+                        </ul>
+                        <button id="logoutBtn" class="user__profile-logout logout">Logout</button>
+                    </div>
+                </aside>
+                <section class="content">
+                    <div class="content__inner">
+                        <div class="content-top">
+                            <h1 class="content-main-title">Welcome back!</h1>
+                        </div>
+                        <div class="content-sections">
+                            <div class="content-sections-inner content-wrapper">
+                                <div class="content-to-do">
+                                    <header class="content-to-do-header">
+                                        <h2 class="content-to-do-title content-title">My Tasks</h2>
+                                    </header>
+                                    <div class="add-task-box">
+                                        <div class="input-group">
+                                            <input type="text" id="newTaskInput" placeholder="Task title..."
+                                                class="add-task-input">
+
+                                            <div class="input-row">
+                                                <input type="text" id="newTaskDesc" placeholder="Description (optional)"
+                                                    class="add-task-input desc-input">
+
+                                                <select id="newTaskPriority" class="add-task-select">
+                                                    <option value="Low">Low</option>
+                                                    <option value="Normal" selected>Normal</option>
+                                                    <option value="High">High</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <button id="addTaskBtn" class="add-task-btn">Add</button>
+                                    </div>
+                                    <ul class="content-to-do-main">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/dashboard.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+:root {
+    --title-color: #000000;
+    --desc-color: #747474;
+    --section-title-color: #FF6767;
+    --moderate-color: #42ADE2;
+    --progress-title-color: #0225FF;
+    --completed-title-color: #05A301;
+    --menu-title-color: #FFFFFF;
+    --main-bg: #eeeeee;
+    --join-us-bg: linear-gradient(138deg, rgba(255, 156, 156, 1) 0%, rgba(255, 103, 103, 1) 50%);
+    --dash-board-header-color: #F8F8F8;
+
+    --main-font: 'Inter', sans-serif;
+    --border-radius: 20px;
+    --input-border-radius: 10px;
+    --box-shadow: 0px 5px 10px var(--main-bg)
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+a,
+button,
+li,
+input {
+    transition-duration: .2s;
+}

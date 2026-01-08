@@ -1,0 +1,136 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.btn {
+    padding: 0.8rem 1rem;
+    border-radius: calc(var(--border-radius) - 10px);
+    background-color: var(--title-color);
+    color: var(--menu-title-color);
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+.input {
+    width: 100%;
+    border: 1px solid var(--main-bg);
+    border-radius: calc(var(--border-radius) - 10px);
+    padding-block: 10px;
+    padding-inline: 10px;
+}
+.input:hover, .input:focus {
+    background-color: var(--main-bg);
+}
+.header {
+    color: var(--menu-title-color);
+    padding: 48px;
+    min-height: 100vh;
+    background: var(--join-us-bg);
+}
+.header__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.header__img-box {
+}
+.header__img {
+    filter: invert(1);
+}
+.header__content-wrapper {
+}
+.content-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+.header__content-desc {
+    font-size: 1.25rem;
+}
+.header__label {
+    font-size: 1rem;
+}
+
+
+.main {
+}
+.block {
+    height: 100%;
+}
+.img-box {
+    display: none;
+    filter: invert(1);
+    margin-bottom: 2rem;
+}
+.inner {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--main-bg);
+    box-shadow: var(--box-shadow);
+}
+.fields {
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.desc {
+    color: var(--desc-color);
+    margin-bottom: 1.5rem;
+}
+.label {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.input + .label {
+    margin-top: 2rem;
+}
+.name {
+}
+.email {
+}
+.password::placeholder, .confirm::placeholder {
+    font-size: 1.5rem;
+}
+.confirm {
+}
+.block-btn {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+.login-text {
+    text-align: center;
+}
+.login-link {
+    color: rgba(255, 156, 156, 1);
+}
+
+@media(max-width: 821px) {
+    .header{
+        display: none;
+    }
+    .img-box {
+        display: block;
+    }
+    .form {
+        background-color: var(--menu-title-color);
+    }
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--join-us-bg);
+    }
+}
