@@ -7,7 +7,7 @@
     border-radius: calc(var(--border-radius) - 10px);
     background-color: var(--title-color);
     color: var(--menu-title-color);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.875rem;
 }
 .input {
@@ -33,12 +33,8 @@
     justify-content: space-between;
     align-items: start;
 }
-.header__img-box {
-}
 .header__img {
     filter: invert(1);
-}
-.header__content-wrapper {
 }
 .content-title {
     font-size: 3rem;
@@ -51,9 +47,6 @@
     font-size: 1rem;
 }
 
-
-.main {
-}
 .block {
     height: 100%;
 }
@@ -96,14 +89,8 @@
 .input + .label {
     margin-top: 2rem;
 }
-.name {
-}
-.email {
-}
 .password::placeholder, .confirm::placeholder {
     font-size: 1.5rem;
-}
-.confirm {
 }
 .block-btn {
     margin-top: 2rem;

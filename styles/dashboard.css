@@ -14,9 +14,9 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin-inline: auto;
-    padding-inline: 20px;
+    padding-inline: 15px;
 }
 
 .header__inner {
@@ -60,7 +60,7 @@ body {
 }
 
 .header__user-name {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--title-color);
 }
 
@@ -95,7 +95,7 @@ body {
 
 .user__profile-nick {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.2rem;
     color: var(--title-color);
 }
@@ -118,7 +118,7 @@ body {
     padding: 12px 20px;
     border-radius: 12px;
     color: var(--desc-color);
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     transition: all 0.2s;
     text-align: left;
@@ -127,7 +127,7 @@ body {
 .user__profile-sections-item.active .user__profile-sections-item-link {
     background-color: rgba(255, 103, 103, 0.1);
     color: var(--section-title-color);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .user__profile-sections-item-link:hover {
@@ -159,7 +159,7 @@ body {
 
 .content-main-title {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 2rem;
 }
 
@@ -239,7 +239,7 @@ body {
     border: none;
     padding: 0 30px;
     border-radius: 15px;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(255, 103, 103, 0.3);
     font-family: inherit;
@@ -278,7 +278,7 @@ body {
 
 .task-title {
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
@@ -301,9 +301,18 @@ body {
     color: #666;
 }
 
-.priority-high { color: #ff4444 !important; background: #ffebeb !important; }
-.priority-normal { color: #0225FF !important; background: #ebf0ff !important; }
-.priority-low { color: #05A301 !important; background: #ebffeb !important; }
+.priority-high { 
+    color: #ff4444; 
+    background: #ffebeb; 
+}
+.priority-normal { 
+    color: #0225FF;
+    background: #ebf0ff; 
+}
+.priority-low { 
+    color: #05A301;
+    background: #ebffeb;
+}
 
 .delete-btn {
     background: none;
@@ -336,8 +345,8 @@ body {
 }
 
 .status-done {
-    background-color: #d1e7dd !important;
-    color: #0f5132 !important;
+    background-color: #d1e7dd;
+    color: #0f5132;
 }
 
 .task-completed .task-title {
@@ -356,9 +365,8 @@ body {
     opacity: 0.9;
 }
 
-
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 .settings-form {
@@ -431,18 +439,79 @@ body {
     box-shadow: 0 4px 10px rgba(255, 68, 68, 0.3);
 }
 
+@media (max-width: 901px) {
+    .content {
+        padding: 2rem;
+    }
+    .main__inner {
+        gap: 15px;
+    }
+    .input-row {
+        flex-direction: column;
+    }
+    .add-task-select {
+        padding-block: 10px;
+    }
+}
+
 @media (max-width: 800px) {
-    .main__inner { grid-template-columns: 1fr; }
-    .user__profile { margin-bottom: 20px; }
-    .header__search { display: none; }
+    .user__profile {
+        width: 85%;
+    }
+    .main__inner { 
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    .user__profile { 
+        margin-bottom: 20px; 
+    }
+    .header__search { 
+        display: none; 
+    }
+    .content {
+        width: 90%;
+    }
 }
 
 @media (max-width: 600px) {
-    .add-task-box { flex-direction: column; }
-    .input-row { flex-direction: column; width: 100%; }
-    .add-task-btn { height: 50px; width: 100%; }
-    .add-task-select { padding: 12px; }
+    .content {
+        padding-inline: 1.5rem;
+    }
+    .user__profile, .content {
+        width: 100%;
+    }
+    .content-main-title, .content-title {
+        text-align: center;
+    }
+    .content-main-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+    .content-title {
+        font-size: 1.35rem;
+    }
+    .add-task-box { 
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .input-row { 
+        flex-direction: column; 
+        width: 100%; 
+    }
+    .add-task-btn { 
+        height: 50px;
+        width: 100%; 
+    }
+    .add-task-select { 
+        padding: 12px;
+    }
     
-    .settings-form { max-width: 100%; align-items: stretch; }
-    .save-btn, .delete-account-btn { width: 100%; align-self: stretch; }
+    .settings-form { 
+        max-width: 100%;
+        align-items: stretch; 
+    }
+    .save-btn, .delete-account-btn { 
+        width: 100%;
+        align-self: stretch; 
+    }
 }
