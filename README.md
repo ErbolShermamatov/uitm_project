@@ -47,21 +47,3 @@ The project was built using a pure frontend stack without external frameworks:
 
 ### 3. Mobile View & Search
 ![Mobile View](./screenshots/mobile.jpeg)
-
----
-
-## Project Structure
-
-/UITM
-├── index.html          # Landing Page
-├── login-register.html # Auth Page
-├── dashboard.html      # Main App
-├── styles/             # CSS Files
-│   ├── style.css
-│   ├── dashboard.css
-│   └── ...
-├── scripts/            # JS Modules
-│   ├── dashboard.js
-│   ├── ui.js
-│   └── ...
-└── README.md
