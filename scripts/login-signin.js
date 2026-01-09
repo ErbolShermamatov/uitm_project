@@ -35,7 +35,7 @@ function registerNewUser(event) {
     const userExists = users.find(u => u.email === emailValue);
 
     if(userExists) {
-        alert('Такой пользователь уже существует!')
+        alert('This user already exists!')
         return;
     }
 
@@ -65,6 +65,6 @@ function signInUser(event) {
         localStorage.setItem('tm_currentUser', JSON.stringify(foundUser));
         window.location.href = 'dashboard.html'
     } else {
-        alert('Invalid email or password');
+        alert('Invalid email or password or such a user was not registered');
     }
 }

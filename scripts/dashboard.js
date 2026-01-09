@@ -11,10 +11,18 @@ const email = document.querySelector('.user__profile-email');
 const mainTitle = document.querySelector('.content-main-title');
 const headerName = document.getElementById('headerUsername');
 
-if (nick) nick.textContent = currentUser.name;
-if (email) email.textContent = currentUser.email;
-if (mainTitle) mainTitle.textContent = `Welcome back, ${currentUser.name}`;
-if (headerName) headerName.textContent = currentUser.name;
+if (nick) {
+    nick.textContent = currentUser.name;
+} 
+if (email) {
+    email.textContent = currentUser.email;
+} 
+if (mainTitle) {
+    mainTitle.textContent = `Welcome back, ${currentUser.name}`;
+} 
+if (headerName) {
+    headerName.textContent = currentUser.name;
+}
 
 const taskInput = document.getElementById('newTaskInput');
 const descInput = document.getElementById('newTaskDesc');
@@ -31,14 +39,16 @@ if (searchInput) {
 
         const filteredTasks = currentUser.tasks.filter(task => {
             return task.title.toLowerCase().includes(query) || 
-                   task.description.toLowerCase().includes(query);
+                task.description.toLowerCase().includes(query);
         });
 
         renderTasks(filteredTasks);
     });
 }
 
-if (addBtn) addBtn.addEventListener('click', addTask);
+if (addBtn) {
+    addBtn.addEventListener('click', addTask);
+} 
 
 function addTask() {
     const text = taskInput.value.trim();
@@ -63,7 +73,7 @@ function addTask() {
     if (!currentUser.tasks) currentUser.tasks = [];
     currentUser.tasks.unshift(newTask);
 
-    saveToDatabase();    
+    saveToDatabase();
     if (searchInput) searchInput.value = '';
     
     renderTasks();
@@ -229,8 +239,12 @@ saveSettingsBtn.addEventListener('click', () => {
 
     saveToDatabase();
     
-    if (nick) nick.textContent = currentUser.name;
-    if (headerName) headerName.textContent = currentUser.name;
+    if (nick) {
+        nick.textContent = currentUser.name;
+    } 
+    if (headerName) {
+        headerName.textContent = currentUser.name;
+    } 
     
     alert("Settings saved successfully!");
 });
