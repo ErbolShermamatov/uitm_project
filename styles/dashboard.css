@@ -25,6 +25,36 @@ body {
     align-items: center;
 }
 
+.header__form {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__search {
+    background-color: #f0f2f5;
+    border: 1px solid #e1e4ea;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.2s;
+    outline: none;
+    color: var(--title-color);
+}
+
+.header__search:focus {
+    background-color: white;
+    border-color: var(--section-title-color);
+    box-shadow: 0 0 0 4px rgba(255, 103, 103, 0.1);
+}
+
+.header__search-btn {
+    display: none;
+}
+
 .header__user-info {
     font-size: 1rem;
 }
@@ -41,10 +71,10 @@ body {
 
 .main__inner {
     display: grid;
-    margin-top: 85px;
     grid-template-columns: 280px 1fr;
     gap: 30px;
     align-items: start;
+    margin-top: 70px;
 }
 
 .user__profile {
@@ -168,7 +198,7 @@ body {
 }
 
 .add-task-input {
-    border: 1px solid transparent;
+    border: 1px solid #e1e4ea;
     background: white;
     padding: 12px 15px;
     font-size: 1rem;
@@ -177,6 +207,7 @@ body {
     font-family: inherit;
     transition: 0.2s;
     width: 100%;
+    color: var(--title-color);
 }
 
 .add-task-input:focus {
@@ -185,7 +216,7 @@ body {
 }
 
 .add-task-select {
-    border: 1px solid transparent;
+    border: 1px solid #e1e4ea;
     background: white;
     padding: 0 15px;
     font-size: 0.9rem;
@@ -199,6 +230,7 @@ body {
 
 .add-task-select:hover {
     background: #fff0f0;
+    border-color: var(--section-title-color);
 }
 
 .add-task-btn {
@@ -291,9 +323,118 @@ body {
     transform: scale(1.1);
 }
 
+.task-status {
+    cursor: pointer;
+    transition: transform 0.2s;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+.task-status:hover {
+    transform: scale(1.05);
+    border-color: rgba(0,0,0,0.1);
+}
+
+.status-done {
+    background-color: #d1e7dd !important;
+    color: #0f5132 !important;
+}
+
+.task-completed .task-title {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.task-completed .task-desc {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.task-completed {
+    background-color: #fafafa;
+    border-color: #eee;
+    opacity: 0.9;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    align-items: flex-start; 
+}
+
+.settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.settings-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--desc-color);
+}
+
+.save-btn {
+    background: var(--title-color);
+    color: white;
+    margin-top: 10px;
+    padding: 12px 30px;
+    width: auto;
+    align-self: flex-start;
+}
+
+.save-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.danger-zone {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+.danger-title {
+    color: #ff4444;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.danger-desc {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.delete-account-btn {
+    background: transparent;
+    color: #ff4444;
+    border: 2px solid #ff4444;
+    width: auto;
+    align-self: flex-start;
+    padding: 10px 25px;
+}
+
+.delete-account-btn:hover {
+    background-color: #ff4444;
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 68, 68, 0.3);
+}
+
 @media (max-width: 800px) {
     .main__inner { grid-template-columns: 1fr; }
     .user__profile { margin-bottom: 20px; }
+    .header__search { display: none; }
 }
 
 @media (max-width: 600px) {
@@ -301,4 +442,7 @@ body {
     .input-row { flex-direction: column; width: 100%; }
     .add-task-btn { height: 50px; width: 100%; }
     .add-task-select { padding: 12px; }
+    
+    .settings-form { max-width: 100%; align-items: stretch; }
+    .save-btn, .delete-account-btn { width: 100%; align-self: stretch; }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - TaskMaster</title>
+    <title>TaskMaster - Dashboard</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/variables.css">
@@ -21,6 +21,11 @@
                         <img src="./images/logo.svg" alt="TaskMaster Logo" width="150">
                     </a>
                 </div>
+                <form class="header__form">
+                    <input type="search" id="searchInput" class="header__search" placeholder="Search your task here...">
+
+                    <button type="button" class="header__search-btn"></button>
+                </form>
                 <div class="header__user-info">
                     Hello, <span id="headerUsername" class="header__user-name">User</span>
                 </div>
@@ -40,10 +45,10 @@
                             </div>
                         </div>
                         <ul class="user__profile-sections-list">
-                            <li class="user__profile-sections-item active">
+                            <li class="user__profile-sections-item active" id="navTasks">
                                 <a href="#" class="user__profile-sections-item-link">My Tasks</a>
                             </li>
-                            <li class="user__profile-sections-item">
+                            <li class="user__profile-sections-item" id="navSettings">
                                 <a href="#" class="user__profile-sections-item-link">Settings</a>
                             </li>
                         </ul>
@@ -65,7 +70,6 @@
                                         <div class="input-group">
                                             <input type="text" id="newTaskInput" placeholder="Task title..."
                                                 class="add-task-input">
-
                                             <div class="input-row">
                                                 <input type="text" id="newTaskDesc" placeholder="Description (optional)"
                                                     class="add-task-input desc-input">
@@ -82,6 +86,34 @@
                                     </div>
                                     <ul class="content-to-do-main">
                                     </ul>
+                                </div>
+                                <div class="content-settings hidden">
+                                    <header class="content-to-do-header">
+                                        <h2 class="content-title">Profile Settings</h2>
+                                    </header>
+
+                                    <div class="settings-form">
+                                        <div class="settings-group">
+                                            <label class="settings-label">Full Name</label>
+                                            <input type="text" id="settingsName" class="add-task-input">
+                                        </div>
+
+                                        <div class="settings-group">
+                                            <label class="settings-label">New Password</label>
+                                            <input type="password" id="settingsPass" class="add-task-input"
+                                                placeholder="Leave empty to keep current">
+                                        </div>
+
+                                        <button id="saveSettingsBtn" class="add-task-btn save-btn">Save Changes</button>
+
+                                        <div class="danger-zone">
+                                            <h3 class="danger-title">Danger Zone</h3>
+                                            <p class="danger-desc">Once you delete your account, there is no going back.
+                                                All your tasks will be lost.</p>
+                                            <button id="deleteAccountBtn" class="add-task-btn delete-account-btn">Delete
+                                                My Account</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
