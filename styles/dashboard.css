@@ -515,3 +515,15 @@ body {
         align-self: stretch; 
     }
 }
+@media (max-width: 481px) {
+    .content-to-do-item {
+        padding: 1rem;
+    }
+    .content-to-do-item-info {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .delete-btn {
+        margin-left: 0;
+    }
+}
