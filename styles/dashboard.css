@@ -1,6 +1,5 @@
 body {
     background-color: #f8f9fd;
-    font-family: var(--main-font);
     color: var(--title-color);
 }
 
@@ -14,9 +13,9 @@ body {
 }
 
 .container {
-    max-width: 1300px;
+    max-width: 81.25rem;
     margin-inline: auto;
-    padding-inline: 15px;
+    padding-inline: 1rem;
 }
 
 .header__inner {
@@ -35,11 +34,11 @@ body {
     background-color: #f0f2f5;
     border: 1px solid #e1e4ea;
     border-radius: 12px;
-    padding: 12px 20px;
+    padding: 0.75rem 1.25rem;
     font-family: inherit;
     font-size: 0.95rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 25rem;
     transition: all 0.2s;
     outline: none;
     color: var(--title-color);
@@ -71,23 +70,23 @@ body {
 
 .main__inner {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 30px;
+    grid-template-columns: 17.5rem 1fr; 
+    gap: 1.875rem;
     align-items: start;
-    margin-top: 70px;
+    margin-top: 4.375rem;
 }
 
 .user__profile {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     padding: 2rem;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.03);
     text-align: center;
 }
 
 .user__profile-img-box {
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     background: var(--join-us-bg);
     border-radius: 50%;
     margin: 0 auto 1rem;
@@ -109,14 +108,14 @@ body {
 .user__profile-sections-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     margin-bottom: 2rem;
 }
 
 .user__profile-sections-item-link {
     display: block;
-    padding: 12px 20px;
-    border-radius: 12px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
     color: var(--desc-color);
     font-weight: 600;
     text-decoration: none;
@@ -151,20 +150,20 @@ body {
 
 .content {
     background: white;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     padding: 2.5rem;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.03);
     min-height: 500px;
 }
 
 .content-main-title {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 3vw, 2rem);
     font-weight: 600;
     margin-bottom: 2rem;
 }
 
 .content-title {
-    font-size: 1.5rem;
+    font-size: clamp(1.35rem, 2vw, 1.5rem);
     color: var(--section-title-color);
     margin-bottom: 1.5rem;
     font-weight: 600;
@@ -177,33 +176,35 @@ body {
 
 .add-task-box {
     display: flex;
-    gap: 15px;
+    gap: 1rem;
     background: #f8f9fd;
-    padding: 20px;
-    border-radius: 20px;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
     margin-bottom: 2rem;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     flex-grow: 1;
+    min-width: 250px;
 }
 
 .input-row {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .add-task-input {
     border: 1px solid #e1e4ea;
     background: white;
-    padding: 12px 15px;
+    padding: 0.75rem 1rem;
     font-size: 1rem;
     outline: none;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     font-family: inherit;
     transition: 0.2s;
     width: 100%;
@@ -218,14 +219,15 @@ body {
 .add-task-select {
     border: 1px solid #e1e4ea;
     background: white;
-    padding: 0 15px;
+    padding: 0 1rem;
     font-size: 0.9rem;
     outline: none;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     font-family: inherit;
     cursor: pointer;
     color: var(--desc-color);
     font-weight: 500;
+    height: 46px;
 }
 
 .add-task-select:hover {
@@ -237,17 +239,17 @@ body {
     background: var(--join-us-bg);
     color: white;
     border: none;
-    padding: 0 30px;
-    border-radius: 15px;
+    padding: 0 2rem;
+    border-radius: 1rem;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(255, 103, 103, 0.3);
     font-family: inherit;
     align-self: stretch;
+    min-height: 46px;
 }
 
 .add-task-btn:hover {
-    transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(255, 103, 103, 0.4);
 }
 
@@ -255,19 +257,21 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .content-to-do-item {
     background: white;
     border: 1px solid #eee;
     padding: 1.5rem;
-    border-radius: 15px;
+    border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.2s;
     border-left: 4px solid var(--progress-title-color);
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .content-to-do-item:hover {
@@ -289,9 +293,10 @@ body {
 
 .content-to-do-item-info {
     display: flex;
-    gap: 15px;
+    gap: 1rem;
     font-size: 0.8rem;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .task-priority, .task-status, .task-date {
@@ -307,11 +312,11 @@ body {
 }
 .priority-normal { 
     color: #0225FF;
-    background: #ebf0ff; 
+    background: #ebf0ff;
 }
 .priority-low { 
     color: #05A301;
-    background: #ebffeb;
+    background: #ebffeb; 
 }
 
 .delete-btn {
@@ -324,7 +329,7 @@ body {
     padding: 0 10px;
     line-height: 1;
     transition: 0.2s;
-    margin-left: 10px;
+    margin-left: auto;
 }
 
 .delete-btn:hover {
@@ -365,22 +370,22 @@ body {
     opacity: 0.9;
 }
 
-.hidden {
-    display: none;
+.hidden { 
+    display: none; 
 }
 
 .settings-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 500px;
+    gap: 1.25rem;
+    max-width: 31.25rem;
     align-items: flex-start; 
 }
 
 .settings-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
     width: 100%;
 }
 
@@ -393,21 +398,20 @@ body {
 .save-btn {
     background: var(--title-color);
     color: white;
-    margin-top: 10px;
-    padding: 12px 30px;
+    margin-top: 0.625rem;
+    padding: 0.75rem 2rem;
     width: auto;
     align-self: flex-start;
 }
 
 .save-btn:hover {
     opacity: 0.9;
-    transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .danger-zone {
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
     border-top: 1px solid #eee;
     width: 100%;
 }
@@ -415,13 +419,13 @@ body {
 .danger-title {
     color: #ff4444;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .danger-desc {
     font-size: 0.9rem;
     color: #888;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 .delete-account-btn {
@@ -430,7 +434,7 @@ body {
     border: 2px solid #ff4444;
     width: auto;
     align-self: flex-start;
-    padding: 10px 25px;
+    padding: 0.625rem 1.5rem;
 }
 
 .delete-account-btn:hover {
@@ -443,33 +447,26 @@ body {
     .content {
         padding: 2rem;
     }
-    .main__inner {
-        gap: 15px;
-    }
     .input-row {
         flex-direction: column;
-    }
-    .add-task-select {
-        padding-block: 10px;
     }
 }
 
 @media (max-width: 800px) {
-    .user__profile {
-        width: 85%;
-    }
     .main__inner { 
         grid-template-columns: 1fr;
         place-items: center;
     }
     .user__profile { 
-        margin-bottom: 20px; 
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 1.25rem; 
     }
     .header__search { 
         display: none; 
     }
     .content {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -477,53 +474,23 @@ body {
     .content {
         padding-inline: 1.5rem;
     }
-    .user__profile, .content {
-        width: 100%;
-    }
     .content-main-title, .content-title {
         text-align: center;
-    }
-    .content-main-title {
-        font-size: 1.75rem;
-        margin-bottom: 1.5rem;
-    }
-    .content-title {
-        font-size: 1.35rem;
     }
     .add-task-box { 
         flex-direction: column;
         align-items: stretch;
     }
     .input-row { 
-        flex-direction: column; 
         width: 100%; 
-    }
-    .add-task-btn { 
-        height: 50px;
-        width: 100%; 
-    }
-    .add-task-select { 
-        padding: 12px;
     }
     
     .settings-form { 
         max-width: 100%;
         align-items: stretch; 
     }
-    .save-btn, .delete-account-btn { 
+    .save-btn, .delete-account-btn, .add-task-btn { 
         width: 100%;
         align-self: stretch; 
-    }
-}
-@media (max-width: 481px) {
-    .content-to-do-item {
-        padding: 1rem;
-    }
-    .content-to-do-item-info {
-        gap: 5px;
-        flex-wrap: wrap;
-    }
-    .delete-btn {
-        margin-left: 0;
     }
 }
